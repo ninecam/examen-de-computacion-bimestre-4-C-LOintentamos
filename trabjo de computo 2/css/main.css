@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    --fondo-okis: linear-gradient(45deg, #e69f4e, #17a374);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--fondo-okis);
+}
+
+button {
+    border-radius: 50%;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    background-image: var(--fondo-okis);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid 20px #6feeff;
+    transition: all 2s;
+    transform: rotate(0deg); /* Cambiado a 0deg para que inicie sin rotación */
+    animation-name: fondo-okis;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    overflow: hidden;
+}
+
+@keyframes fondo-okis {
+    from {
+        background-color: blueviolet; /* Corregido el gradiente inicial */
+    }
+    to {
+        background-image: linear-gradient(rgb(188, 0, 255), rgb(246, 255, 0));
+        border: solid 10px rgb(0, 0, 0);
+        transform: rotate(360deg);
+    }
+}
